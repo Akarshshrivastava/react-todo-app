@@ -1,38 +1,94 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
+  padding: 50px 0px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  background: #f8f8f8;
+}
+div {
+  color: #3a3a3a;
+}
+.header form {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 24px auto !important;
+  width: 50%;
+}
+.header .form-group {
+  width: 300px;
+  margin: 0px 0px !important;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 3px #00000020;
+  background-color: #ffffff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.notify .alert {
+  margin: 5px 0px !important;
+}
+.btn-options button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+  margin: 0 5px;
+}
+.fa-trash {
+  color: rgb(158, 157, 157);
+}
+.fa-trash:hover {
+  color: rgb(216, 47, 47);
+}
+.fa-edit {
+  color: rgb(163, 163, 230);
+}
+.fa-edit:hover {
+  color: rgb(77, 77, 219);
+}
+@media screen and (max-width: 992px) {
+  .header form {
+    width: 70% !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 768px) {
+  .header form {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header form button {
+    width: 100% !important;
+  }
+  .header .form-group {
+    width: 100%;
+    margin: 0px 0px 20px 0px !important;
+    padding: 6px 0px;
+  }
+  .todo-card {
+    padding: 12px;
+  }
+  .todo-item {
+    font-size: 0.9rem;
+  }
+  .btn-options button {
+    font-size: 1rem;
   }
 }
